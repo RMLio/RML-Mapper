@@ -1,0 +1,4 @@
+#cd RML-Processor/
+java -jar RML-Processor/target/RML-Processor-0.2.jar $*
+
+cd ../
