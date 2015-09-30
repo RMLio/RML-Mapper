@@ -1,17 +1,31 @@
-if [ ! -d "RML-Processor/target" ]; then
+compile () {
   echo "Compiling RML-Mapper started..."
   mvn clean install -DskipTests
-  cp RML-Processor/target/RML-Processor-0.2.jar RML-Mapper.jar 
-  echo "Compiling RML-Mapper finished..."
-fi
-
-if [ ! -d "RML-Mapper.jar" ]; then
   cp RML-Processor/target/RML-Processor-0.2.jar RML-Mapper.jar
+  echo "Compiling RML-Mapper finished..."
+}
+
+execute () {
+  #check if compiled
+  if [ ! -d "RML-Processor/target" ]; then
+    compile
+  fi
+  
+  #check if RMLMapper.jar exists
+  if [ ! -d "RML-Mapper.jar" ]; then
+    cp RML-Processor/target/RML-Processor-0.2.jar RML-Mapper.jar
+  fi
+  
+  #excute the mapping document
+  echo "Running RML-Mapper started..."
+  java -jar RML-Mapper.jar $*
+  #echo "Running RML-Mapper stopped..."
+}
+
+if [ "$#" -eq 0 ] ; then
+  echo "Compilation mode"
+  compile
+else
+  echo "Execution mode"
+  execute $*
 fi
-
-echo "Running RML-Mapper started..."
-#cd RML-Processor/
-java -jar RML-Mapper.jar $*
-echo "Running RML-Mapper stopped..."
-
-cd ../
