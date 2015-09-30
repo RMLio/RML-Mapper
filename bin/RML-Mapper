@@ -1,4 +1,14 @@
+if [ ! -d "RML-Processor/target" ]; then
+  echo "Compiling RML-Mapper started..."
+  mvn clean install -DskipTests
+  cp RML-Processor/target/RML-Processor-0.2.jar RML-Mapper.jar 
+  echo "Compiling RML-Mapper finished..."
+fi
+
+
+echo "Running RML-Mapper started..."
 #cd RML-Processor/
-java -jar RML-Processor/target/RML-Processor-0.2.jar $*
+java -jar RML-Mapper.jar $*
+echo "Running RML-Mapper stopped..."
 
 cd ../
