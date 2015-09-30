@@ -1,0 +1,15 @@
+[submodule "RML-Processor"]
+	path = RML-Processor
+	url = git@git.mmlab.be:rml/RML-Processor.git
+[submodule "RML-Model"]
+	path = RML-Model
+	url = git@git.mmlab.be:rml/RML-Model.git
+[submodule "RML-Condition"]
+	path = RML-Condition
+	url = git@git.mmlab.be:rml/RML-Condition.git
+[submodule "RML-DataRetrieval"]
+	path = RML-DataRetrieval
+	url = git@git.mmlab.be:rml/RML-DataRetrieval.git
+[submodule "RML-MapDocHandler"]
+	path = RML-MapDocHandler
+	url = git@git.mmlab.be:rml/RML-MapDocHandler.git
