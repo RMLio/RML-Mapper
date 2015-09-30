@@ -16,11 +16,11 @@
     </properties>
 
     <modules>
-	<module>rmlprocessor</module>
-        <module>rml-model</module>
-        <module>rml-condition</module>
-	<module>rml-mapdochandler</module>
-	<module>rml-dataretrieval</module>
+	<module>RML-Processor</module>
+        <module>RML-Model</module>
+        <module>RML-Condition</module>
+	<module>RML-MapDocHandler</module>
+	<module>RML-DataRetrieval</module>
     </modules>
 
     <build>
