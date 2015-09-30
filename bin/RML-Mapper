@@ -5,6 +5,9 @@ if [ ! -d "RML-Processor/target" ]; then
   echo "Compiling RML-Mapper finished..."
 fi
 
+if [ ! -d "RML-Mapper.jar" ]; then
+  cp RML-Processor/target/RML-Processor-0.2.jar RML-Mapper.jar
+fi
 
 echo "Running RML-Mapper started..."
 #cd RML-Processor/
