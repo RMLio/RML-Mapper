@@ -1,6 +1,7 @@
 [submodule "RML-Processor"]
 	path = RML-Processor
 	url = git@git.mmlab.be:rml/RML-Processor.git
+	branch = metadata
 [submodule "RML-Model"]
 	path = RML-Model
 	url = git@git.mmlab.be:rml/RML-Model.git
@@ -13,3 +14,6 @@
 [submodule "RML-MapDocHandler"]
 	path = RML-MapDocHandler
 	url = git@git.mmlab.be:rml/RML-MapDocHandler.git
+[submodule "RML-Metadata"]
+	path = RML-Metadata
+	url = git@git.mmlab.be:rml/RML-Metadata.git
