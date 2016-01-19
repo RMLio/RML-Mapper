@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>be.ugent.mmlab.rml</groupId>
+    <artifactId>RML-Mapper</artifactId>
+    <version>1.0</version>
+  </parent>
+  <groupId>be.ugent.mmlab.rml</groupId>
+  <artifactId>RML-LogicalSourceHandler</artifactId>
+  <version>1.0</version>
+  <name>RML - Logical Source Handler</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <jsonpath.version>2.0.0</jsonpath.version>
+  </properties>
+  
+  <repositories>
+        <repository>
+            <id>repository.jboss.org</id>
+            <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases</url>
+        </repository>
+        <repository>
+            <id>jlibs-repository</id>
+            <name>JLibs Repository</name>
+            <url>https://github.com/santhosh-tekuri/maven-repository/raw/master/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+  
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>be.ugent.mmlab.rml</groupId>
+        <artifactId>RML-Model</artifactId>
+        <version>${project.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>xom</groupId>
+        <artifactId>xom</artifactId>
+        <version>1.2.5</version>
+        <type>jar</type>
+    </dependency>
+    <dependency>
+        <groupId>jlibs</groupId>
+        <artifactId>jlibs-xmldog</artifactId>
+        <version>1.0</version>
+    </dependency>
+    <dependency>
+        <groupId>com.jayway.jsonpath</groupId>
+        <artifactId>json-path</artifactId>
+        <version>${jsonpath.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>apache-lang</groupId>
+        <artifactId>commons-lang</artifactId>
+        <version>2.0</version>
+        <type>jar</type>
+    </dependency>
+    <dependency>
+        <groupId>org.jodd</groupId>
+        <artifactId>jodd-lagarto</artifactId>
+        <version>3.5</version>
+        <type>jar</type>
+    </dependency>
+  </dependencies>
+</project>

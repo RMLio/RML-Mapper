@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <artifactId>RML-Mapper</artifactId>
+    <groupId>be.ugent.mmlab.rml</groupId>
+    <version>1.0</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>be.ugent.mmlab.rml</groupId>
+  <artifactId>RML-LogicalSourceHandler</artifactId>
+  <name>RML - Logical Source Handler</name>
+  <version>1.0</version>
+  <url>http://maven.apache.org</url>
+  <repositories>
+    <repository>
+      <id>repository.jboss.org</id>
+      <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases</url>
+    </repository>
+    <repository>
+      <id>jlibs-repository</id>
+      <name>JLibs Repository</name>
+      <url>https://github.com/santhosh-tekuri/maven-repository/raw/master/</url>
+    </repository>
+  </repositories>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <properties>
+    <jsonpath.version>2.0.0</jsonpath.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+</project>
+
