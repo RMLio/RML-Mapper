@@ -22,6 +22,8 @@
 	<module>RML-MapDocHandler</module>
 	<module>RML-DataRetrieval</module>
     <module>RML-Metadata</module>
+    <module>GREL</module>
+    <module>RML-LogicalSourceHandler</module>
   </modules>
 
     <build>
