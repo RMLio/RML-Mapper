@@ -1,0 +1,12 @@
+language: java
+
+before_install:
+  chmod +x bin/RML-Mapper
+install: bin/RML-Mapper
+deploy:
+  provider: releases
+
+  file: RML-Mapper.jar
+  on:
+    tags: true
+    all_branches: true
