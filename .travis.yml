@@ -6,5 +6,6 @@ install: bin/RML-Mapper
 deploy:
   provider: releases
   api_key: fddae7157c087563038878f361e19da98b6e23d5
+  skip_cleanup: true
 
   file: RML-Mapper.jar
