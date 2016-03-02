@@ -7,6 +7,3 @@ deploy:
   provider: releases
 
   file: RML-Mapper.jar
-  on:
-    tags: true
-    all_branches: true
