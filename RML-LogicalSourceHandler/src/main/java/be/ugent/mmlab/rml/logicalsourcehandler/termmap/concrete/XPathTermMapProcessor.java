@@ -22,6 +22,12 @@ public class XPathTermMapProcessor extends AbstractTermMapProcessor {
     
     public XPathContext nsContext = new XPathContext();
     
+    public XPathTermMapProcessor(){ }
+    
+    public XPathTermMapProcessor(XPathContext nsContext){
+        this.nsContext = nsContext;
+    }
+    
     /**
      * Process a XPath expression against an XML node
      *
@@ -70,48 +76,6 @@ public class XPathTermMapProcessor extends AbstractTermMapProcessor {
     public List<String> extractValueFromNode(Object node, String expression) {
         return extractValueFromNode((Node) node, expression);
     }
-
-    
-    //TODO: Deprecated, remove
-    /*public DefaultNamespaceContext get_namespaces() {
-        //TODO:Get the namespaces from xml file
-        DefaultNamespaceContext dnc = new DefaultNamespaceContext();
-
-        this.nsContext.addNamespace("xsd", Namespaces.URI_XSD);
-        dnc.declarePrefix("xsd", Namespaces.URI_XSD);
-        this.nsContext.addNamespace("gml", "http://www.opengis.net/gml");
-        dnc.declarePrefix("gml", "http://www.opengis.net/gml");
-        this.nsContext.addNamespace("agiv", "http://www.agiv.be/agiv");
-        dnc.declarePrefix("agiv", "http://www.agiv.be/agiv");
-
-        this.nsContext.addNamespace("xsi", "http://www.w3.org/2001/XMLSchema-instance");
-        dnc.declarePrefix("xsi", "http://www.w3.org/2001/XMLSchema-instance");
-        this.nsContext.addNamespace("simcore", "http://www.lbl.gov/namespaces/Sim/SimModelCore");
-        dnc.declarePrefix("simcore", "http://www.lbl.gov/namespaces/Sim/SimModelCore");
-        this.nsContext.addNamespace("simres", "http://www.lbl.gov/namespaces/Sim/ResourcesGeneral");
-        dnc.declarePrefix("simres", "http://www.lbl.gov/namespaces/Sim/ResourcesGeneral");
-        this.nsContext.addNamespace("simgeom", "http://www.lbl.gov/namespaces/Sim/ResourcesGeometry");
-        dnc.declarePrefix("simgeom", "http://www.lbl.gov/namespaces/Sim/ResourcesGeometry");
-        this.nsContext.addNamespace("simbldg", "http://www.lbl.gov/namespaces/Sim/BuildingModel");
-        dnc.declarePrefix("simbldg", "http://www.lbl.gov/namespaces/Sim/BuildingModel");
-        this.nsContext.addNamespace("simmep", "http://www.lbl.gov/namespaces/Sim/MepModel");
-        dnc.declarePrefix("simmep", "http://www.lbl.gov/namespaces/Sim/MepModel");
-        this.nsContext.addNamespace("simmodel", "http://www.lbl.gov/namespaces/Sim/Model");
-        dnc.declarePrefix("simmodel", "http://www.lbl.gov/namespaces/Sim/Model");
-
-        this.nsContext.addNamespace("mml", "http://www.w3.org/1998/Math/MathML");
-        dnc.declarePrefix("mml", "http://www.w3.org/1998/Math/MathML");
-        this.nsContext.addNamespace("xlink", "http://www.w3.org/1999/xlink");
-        dnc.declarePrefix("xlink", "http://www.w3.org/1999/xlink");
-        this.nsContext.addNamespace("xsi", "http://www.w3.org/2001/XMLSchema-instance");
-        dnc.declarePrefix("xsi", "http://www.w3.org/2001/XMLSchema-instance");
-        this.nsContext.addNamespace("tp", "http://www.plazi.org/taxpub");
-        dnc.declarePrefix("tp", "http://www.plazi.org/taxpub");
-        this.nsContext.addNamespace("sparql", "http://www.w3.org/2005/sparql-results#");
-        dnc.declarePrefix("sparql", "http://www.w3.org/2005/sparql-results#");
-
-        return dnc;
-    }*/
     
     @Override
     public String cleansing(String value) {

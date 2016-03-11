@@ -235,6 +235,7 @@ public abstract class AbstractTermMapProcessor implements TermMapProcessor{
         return template.toString();
     }
     
+    @Override
     public List<Value> applyTermType(String value, List<Value> valueList, TermMap termMap){
         TermType termType = termMap.getTermType();
         String languageTag = termMap.getLanguageTag();
