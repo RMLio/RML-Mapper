@@ -13,3 +13,6 @@
 [submodule "RML-MapDocHandler"]
 	path = RML-MapDocHandler
 	url = https://github.com/RMLio/RML-MapDocHandler.git
+[submodule "RML-MetadataHandler"]
+	path = RML-MetadataHandler
+	url = https://github.com/RMLio/RML-MetadataHandler.git
