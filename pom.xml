@@ -21,7 +21,7 @@
         <module>RML-Condition</module>
 	<module>RML-MapDocHandler</module>
 	<module>RML-DataRetrieval</module>
-	<module>RML-MetadaHandler</module>
+	<module>RML-MetadataHandler</module>
     </modules>
 
     <build>
