@@ -16,3 +16,6 @@
 [submodule "RML-MetadataHandler"]
 	path = RML-MetadataHandler
 	url = https://github.com/RMLio/RML-MetadataHandler.git
+[submodule "RML-LogicalSourceHandler"]
+	path = RML-LogicalSourceHandler
+	url = https://github.com/RMLio/RML-LogicalSourceHandler.git
