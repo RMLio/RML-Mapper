@@ -1,3 +1,4 @@
+
 package be.ugent.mmlab.rml.logicalsourcehandler.termmap.concrete;
 
 import be.ugent.mmlab.rml.logicalsourcehandler.termmap.AbstractTermMapProcessor;
@@ -13,28 +14,31 @@ import org.slf4j.LoggerFactory;
  *
  * @author andimou
  */
-public class CSVTermMapProcessor extends AbstractTermMapProcessor {
-    
+public class SQLTermMapProcessor extends AbstractTermMapProcessor {
     // Log
     private static final Logger log = 
             LoggerFactory.getLogger(
-            CSVTermMapProcessor.class.getSimpleName());
+            SQLTermMapProcessor.class.getSimpleName());
 
     @Override
     public List<String> extractValueFromNode(Object node, String expression) {
+        //TODO:Same as CSVTermMapProcessor --> merge
         HashMap<String, String> row = (HashMap<String, String>) node;
-        for(String key : row.keySet())
+
+        for (String key : row.keySet()) {
             key = new String(key.getBytes(), UTF_8);
+        }
         //call the right header in the row
         List<String> list = new ArrayList();
-        if (row.containsKey(expression)){
+        if (row.containsKey(expression)) {
             list.add(row.get(expression));
         }
         return list;
     }
-    
+
     @Override
     public String cleansing(String value) {
+        log.error("Not supported yet."); 
         return value;
     }
 

@@ -17,7 +17,9 @@ import org.slf4j.LoggerFactory;
 public class JSONPathTermMapProcessor extends AbstractTermMapProcessor {
     
     // Log
-    private static final Logger log = LoggerFactory.getLogger(JSONPathTermMapProcessor.class);
+    private static final Logger log = 
+            LoggerFactory.getLogger(
+            JSONPathTermMapProcessor.class.getSimpleName());
     
     @Override
     public List<String> extractValueFromNode(Object node, String expression) {

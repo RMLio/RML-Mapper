@@ -18,7 +18,9 @@ import org.slf4j.LoggerFactory;
 public class CSS3TermMapProcessor extends AbstractTermMapProcessor {
     
     // Log
-    private static final Logger log = LoggerFactory.getLogger(CSS3TermMapProcessor.class);
+    private static final Logger log = 
+            LoggerFactory.getLogger(
+            CSS3TermMapProcessor.class.getSimpleName());
     
     @Override
     public List<String> extractValueFromNode(Object node, String expression) {
