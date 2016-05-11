@@ -40,7 +40,7 @@
     <dependency>
         <groupId>be.ugent.mmlab.rml</groupId>
         <artifactId>RML-Model</artifactId>
-        <version>${project.version}</version>
+        <version>1.0</version>
     </dependency>
     <dependency>
         <groupId>xom</groupId>

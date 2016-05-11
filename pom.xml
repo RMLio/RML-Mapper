@@ -18,9 +18,9 @@
     <modules>
 	<module>RML-Processor</module>
         <module>RML-Model</module>
-        <module>RML-Condition</module>
+        <module>RML-ConditionsHandler</module>
 	<module>RML-MapDocHandler</module>
-	<module>RML-DataRetrieval</module>
+	<module>RML-DataRetrievalHandler</module>
         <module>RML-Metadata</module>
         <module>RML-LogicalSourceHandler</module>
   </modules>
