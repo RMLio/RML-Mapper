@@ -13,3 +13,6 @@
 [submodule "RML-MapDocHandler"]
 	path = RML-MapDocHandler
 	url = git@git.mmlab.be:rml/RML-MapDocHandler.git
+[submodule "RML-Metadata"]
+	path = RML-Metadata
+	url = git@git.mmlab.be:rml/RML-Metadata.git
