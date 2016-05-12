@@ -6,6 +6,8 @@ Clone RML-Mapper
 
 	git clone --recursive git@git.mmlab.be:rml/RML-Mapper.git
 
+	git checkout metadata
+
 	git submodule update --init --recursive
 
 
