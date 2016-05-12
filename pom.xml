@@ -16,6 +16,7 @@
     </properties>
 
     <modules>
+	<module>RML-Model</module>
 	<module>RML-Processor</module>
         <module>RML-Condition</module>
 	<module>RML-MapDocHandler</module>
