@@ -45,6 +45,7 @@ public abstract class AbstractTermMapProcessor implements TermMapProcessor{
         
         switch (map.getTermMapType()) {
             case REFERENCE_VALUED:
+                log.debug("Reference valued");
                 //Get the expression and extract the value
                 ReferenceMap identifier = map.getReferenceMap();
                 values = extractValueFromNode(
@@ -56,11 +57,13 @@ public abstract class AbstractTermMapProcessor implements TermMapProcessor{
                 return valueList;
 
             case CONSTANT_VALUED:
+                log.debug("Constant valued ");
                 //Extract the value directly from the mapping
                 values.add(map.getConstantValue().stringValue().trim());
                 return values;
 
             case TEMPLATE_VALUED:
+                log.debug("Template valued");
                 //Resolve the template
                 String template = map.getStringTemplate();
                 Set<String> tokens = 
@@ -272,7 +275,7 @@ public abstract class AbstractTermMapProcessor implements TermMapProcessor{
                     value = cleansing(value);
                     valueList.add(new LiteralImpl(value, languageTag));
                 } else if (value != null && !value.equals("") && datatype != null) {
-                    valueList.add(new LiteralImpl(value, datatype));
+                        valueList.add(new LiteralImpl(value, datatype));
                 } else if (value != null && !value.equals("")) {
                     valueList.add(new LiteralImpl(value.trim()));
                 }
