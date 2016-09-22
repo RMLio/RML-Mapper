@@ -5,6 +5,7 @@
 [submodule "RML-Model"]
 	path = RML-Model
 	url = git@git.mmlab.be:rml/RML-Model.git
+	branch = development
 [submodule "RML-ConditionsHandler"]
 	path = RML-Condition
 	url = git@git.mmlab.be:rml/RML-Condition.git
@@ -14,6 +15,10 @@
 [submodule "RML-MapDocHandler"]
 	path = RML-MapDocHandler
 	url = git@git.mmlab.be:rml/RML-MapDocHandler.git
+	branch = development
 [submodule "RML-MetadataHandler"]
 	path = RML-Metadata
 	url = git@git.mmlab.be:rml/RML-Metadata.git
+[submodule "RML-LogicalSourceHandler"]
+	path = RML-LogicalSourceHandler
+	url = git@git.mmlab.be:rml/RML-LogicalSourceHandler.git

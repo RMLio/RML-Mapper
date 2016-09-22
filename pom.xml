@@ -5,6 +5,13 @@
     <groupId>be.ugent.mmlab.rml</groupId>
     <artifactId>RML-Mapper</artifactId>
     <version>1.1</version>
+    <!-- <dependencies>
+        <dependency>
+            <groupId>be.ugent.mmlab.rml</groupId>
+            <artifactId>RML-ConditionsHandler</artifactId>
+            <version>1.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies> -->
     <packaging>pom</packaging>
 
     <name>RML - Mapper</name>
@@ -20,6 +27,7 @@
 	<module>RML-Processor</module>
         <module>RML-Condition</module>
 	<module>RML-MapDocHandler</module>
+        <!-- <module>RML-FunctionHandler</module> -->
 	<module>RML-DataRetrieval</module>
         <module>RML-Metadata</module>
         <module>RML-LogicalSourceHandler</module>
