@@ -4,7 +4,7 @@ RML Mapper
 Clone RML-Mapper
 ----------------
 
-	git clone --recursive git@git.mmlab.be:rml/RML-Mapper.git
+	git clone --recursive ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-Mapper.git
 
 	git checkout metadata
 
