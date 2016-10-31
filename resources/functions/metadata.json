@@ -1,0 +1,48 @@
+{
+  "files": [
+    {
+      "path": "GrelFunctions.java",
+      "name": "GrelFunctions",
+      "functions": [
+        {
+          "url": "http://semweb.mmlab.be/ns/grel#isSet",
+          "name": "isSet",
+          "parameters": [
+            {
+              "url": "http://semweb.mmlab.be/ns/grel#valueParameter",
+              "type": "xsd:string"
+            }
+          ]
+        },
+        {
+          "url": "http://semweb.mmlab.be/ns/grel#contains",
+          "name": "contains",
+          "parameters": [
+            {
+              "url": "http://semweb.mmlab.be/ns/grel#valueParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url": "http://semweb.mmlab.be/ns/grel#subStringParameter",
+              "type": "xsd:string"
+            }
+          ]
+        },
+        {
+          "url": "http://semweb.mmlab.be/ns/grel#booleanMatch",
+          "name": "booleanMatch",
+          "parameters": [
+            {
+              "url": "http://semweb.mmlab.be/ns/grel#valueParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url": "http://semweb.mmlab.be/ns/grel#regexParameter",
+              "type": "xsd:string"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

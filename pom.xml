@@ -5,6 +5,13 @@
     <groupId>be.ugent.mmlab.rml</groupId>
     <artifactId>RML-Mapper</artifactId>
     <version>1.1</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.7</version>
+        </dependency>
+    </dependencies>
     <!-- <dependencies>
         <dependency>
             <groupId>be.ugent.mmlab.rml</groupId>
@@ -27,7 +34,7 @@
 	<module>RML-Processor</module>
         <module>RML-Condition</module>
 	<module>RML-MapDocHandler</module>
-        <!-- <module>RML-FunctionHandler</module> -->
+        <module>Function-Processor</module>
 	<module>RML-DataRetrieval</module>
         <module>RML-Metadata</module>
         <module>RML-LogicalSourceHandler</module>

@@ -1,7 +1,7 @@
 .idea/
 /target/
 /RML-Metadata/target/
-/GREL/target/
+/Function-Processor/target/
 /RML-LogicalSourceHandler/target/
 /RML-Mapper-copy/nbproject/private/
 log/
