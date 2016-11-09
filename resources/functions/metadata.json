@@ -43,6 +43,64 @@
           ]
         }
       ]
+    },
+    {
+      "path": "DBpediaFunctions.java",
+      "name": "DBpediaFunctions",
+      "functions": [
+        {
+          "url": "http://dbpedia.org/function/latFunction",
+          "name": "latFunction",
+          "parameters": [
+            {
+              "url" : "http://dbpedia.org/function/latParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/latDegreesParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/latMinutesParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/latSecondsParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/latSecondsParameter",
+              "type" : "xsd:string"
+            }
+          ]
+        },
+        {
+          "url": "http://dbpedia.org/function/lonFunction",
+          "name": "lonFunction",
+          "parameters": [
+            {
+              "url" : "http://dbpedia.org/function/lonParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/lonDegreesParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/lonMinutesParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/lonSecondsParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/lonSecondsParameter",
+              "type" : "xsd:string"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
