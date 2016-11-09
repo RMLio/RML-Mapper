@@ -1,7 +1,8 @@
 {
   "files": [
     {
-      "path": "GrelFunctions.java",
+      "path": "GrelFunctions.jar",
+      "mime": "application/java-archive",
       "name": "GrelFunctions",
       "functions": [
         {
