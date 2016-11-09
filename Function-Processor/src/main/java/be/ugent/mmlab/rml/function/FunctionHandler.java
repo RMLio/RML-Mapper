@@ -58,7 +58,7 @@ public class FunctionHandler {
         JSONArray files = (JSONArray) a.get("files");
         for (int i = 0; i < files.size(); i++) {
             JSONObject fileObj = (JSONObject) files.get(i);
-            Class cls = this.getClass(this.basePath + "/" + fileObj.getAsString("path"), fileObj.getAsString("name"));
+            Class cls = this.getClass(this.basePath + "/" + fileObj.getAsString("path"), fileObj.getAsString("name"), fileObj.getAsString("mime"));
             JSONArray fileFunctions = (JSONArray) fileObj.get("functions");
             for (int j = 0; j < fileFunctions.size(); j++) {
                 JSONObject functionObj = (JSONObject) fileFunctions.get(j);
@@ -107,11 +107,23 @@ public class FunctionHandler {
         return res;
     }
 
-    private Class getClass(String path, String className) {
-        // TODO let's not recompile every time
+    private Class getClass(String path, String className, String mime) {
         File sourceFile = new File(path);
+
+        switch (mime) {
+            case "text/x-java-source":
+                return this.getClassFromJAVA(sourceFile, className);
+            case "application/java-archive":
+                return this.getClassFromJAR(sourceFile, className);
+        }
+
+        return null;
+    }
+
+    private Class getClassFromJAVA(File sourceFile, String className) {
         Class<?> cls = null;
 
+        // TODO let's not recompile every time
         // Compile source file.
         JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
         int res = compiler.run(null, null, null, sourceFile.getPath());
@@ -125,6 +137,20 @@ public class FunctionHandler {
         try {
             classLoader = URLClassLoader.newInstance(new URL[]{(new File(this.basePath)).toURI().toURL()});
             cls = Class.forName(className, true, classLoader);
+        } catch (MalformedURLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return cls;
+    }
+
+    private Class getClassFromJAR(File sourceFile, String className) {
+        Class<?> cls = null;
+
+        URLClassLoader child = null;
+        try {
+            child = URLClassLoader.newInstance(new URL[]{sourceFile.toURI().toURL()});
+            cls = Class.forName(className, true, child);
         } catch (MalformedURLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
