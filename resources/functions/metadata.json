@@ -46,7 +46,8 @@
       ]
     },
     {
-      "path": "DBpediaFunctions.java",
+      "path": "DBpediaFunctions.jar",
+      "mime": "application/java-archive",
       "name": "DBpediaFunctions",
       "functions": [
         {
@@ -70,7 +71,7 @@
               "type": "xsd:string"
             },
             {
-              "url" : "http://dbpedia.org/function/latSecondsParameter",
+              "url" : "http://dbpedia.org/function/latDirectionParameter",
               "type" : "xsd:string"
             }
           ]
@@ -96,7 +97,7 @@
               "type": "xsd:string"
             },
             {
-              "url" : "http://dbpedia.org/function/lonSecondsParameter",
+              "url" : "http://dbpedia.org/function/lonDirectionParameter",
               "type" : "xsd:string"
             }
           ]
