@@ -13,10 +13,20 @@ import org.slf4j.LoggerFactory;
  */
 public class ConcreteFunctionProcessor {
 
-    private FunctionHandler handler;
+    private static ConcreteFunctionProcessor instance = null;
 
-    public ConcreteFunctionProcessor() {
-        this.handler = new FunctionHandler("../resources/functions");
+    private static FunctionHandler handler;
+
+    protected ConcreteFunctionProcessor() {
+        // Exists only to defeat instantiation.
+    }
+
+    public static ConcreteFunctionProcessor getInstance() {
+        if (instance == null) {
+            handler = new FunctionHandler("../resources/functions");
+            instance = new ConcreteFunctionProcessor();
+        }
+        return instance;
     }
 
     // Log
@@ -25,7 +35,7 @@ public class ConcreteFunctionProcessor {
 
     public String processFunction(
             String function, Map<String, String> parameters) {
-        FunctionModel fn = this.handler.get(function);
+        FunctionModel fn = handler.get(function);
         if (fn == null) {
             log.error("The function " + function + " was not defined.");
         }
