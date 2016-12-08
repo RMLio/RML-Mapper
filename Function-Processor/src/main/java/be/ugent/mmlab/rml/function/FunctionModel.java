@@ -27,6 +27,7 @@ public class FunctionModel {
             return this.method.invoke(null, parameters);
         } catch (IllegalAccessException | InvocationTargetException e) {
             // Nothing to do?
+            e.printStackTrace(); // maybe this? :p
         }
         return null;
     }
@@ -38,7 +39,11 @@ public class FunctionModel {
     private Object[] getParameters(Map<String, String> parameters) {
         Object[] args = new Object[this.parameters.length];
         for (int i = 0; i < this.parameters.length; i++) {
-            args[i] = parameters.get(this.parameters[i]);
+            if(parameters.get(this.parameters[i]) != null) {
+                args[i] = parameters.get(this.parameters[i]);
+            } else {
+                args[i] = null;
+            }
         }
         return args;
     }

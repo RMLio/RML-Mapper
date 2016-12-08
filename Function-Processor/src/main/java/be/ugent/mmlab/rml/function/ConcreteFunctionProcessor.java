@@ -2,6 +2,7 @@ package be.ugent.mmlab.rml.function;
 
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Map;
 
 import org.slf4j.Logger;
@@ -27,7 +28,7 @@ public class ConcreteFunctionProcessor {
             try {
                 String classJar = ConcreteFunctionProcessor.class.getResource("/be/ugent/mmlab/rml/function/ConcreteFunctionProcessor.class").toString();
                 if (classJar.startsWith("jar:")) {
-                    basePath = ConcreteFunctionProcessor.class.getProtectionDomain().getCodeSource().getLocation().getPath() + "/";
+                    basePath = (new File(ConcreteFunctionProcessor.class.getProtectionDomain().getCodeSource().getLocation().getPath())).getParent() + "/";
                 } else {
                     basePath = (new File(ConcreteFunctionProcessor.class.getProtectionDomain().getCodeSource().getLocation().getPath())).getParent() + "/../../";
                 }
@@ -45,15 +46,21 @@ public class ConcreteFunctionProcessor {
     private static final Logger log =
             LoggerFactory.getLogger(ConcreteFunctionProcessor.class);
 
-    public String processFunction(
+    public ArrayList<String> processFunction(
             String function, Map<String, String> parameters) {
         FunctionModel fn = handler.get(function);
+
         if (fn == null) {
             System.err.println("The function " + function + " was not defined.");
             log.error("The function " + function + " was not defined.");
             //TODO: wmaroy:
-            return "undefined";
+            return null;
         }
-        return fn.execute(parameters).toString();
+        Object result = fn.execute(parameters);
+        if(result != null) {
+            return (ArrayList<String>) result;
+        } else {
+            return new ArrayList<String>();
+        }
     }
 }
