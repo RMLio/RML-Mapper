@@ -101,6 +101,44 @@
               "type" : "xsd:string"
             }
           ]
+        },
+        {
+          "url": "http://dbpedia.org/function/simplePropertyFunction",
+          "name": "simplePropertyFunction",
+          "parameters": [
+            {
+              "url" : "http://dbpedia.org/function/propertyParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/factorParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/transformParameter",
+              "type" : "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/selectParameter",
+              "type" : "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/prefixParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/suffixParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/unitParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/dataTypeParameter",
+              "type": "xsd:string"
+            }
+          ]
         }
       ]
     }
