@@ -33,9 +33,9 @@ public class ConcreteFunctionProcessor {
                     basePath = (new File(ConcreteFunctionProcessor.class.getProtectionDomain().getCodeSource().getLocation().getPath())).getParent() + "/../../";
                 }
             } catch (Exception e) {
-                System.err.println("err: " + e.getMessage());
+                log.error(e.getMessage());
             }
-            System.err.println("basePath: " + basePath);
+            log.debug("basePath: " + basePath);
             handler = new FunctionHandler(basePath + "resources/functions");
             instance = new ConcreteFunctionProcessor();
         }

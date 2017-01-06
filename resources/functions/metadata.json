@@ -6,39 +6,63 @@
       "name": "GrelFunctions",
       "functions": [
         {
-          "url": "http://semweb.mmlab.be/ns/grel#isSet",
+          "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#isSet",
           "name": "isSet",
           "parameters": [
             {
-              "url": "http://semweb.mmlab.be/ns/grel#valueParameter",
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#valueParameter",
               "type": "xsd:string"
             }
           ]
         },
         {
-          "url": "http://semweb.mmlab.be/ns/grel#contains",
+          "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#contains",
           "name": "contains",
           "parameters": [
             {
-              "url": "http://semweb.mmlab.be/ns/grel#valueParameter",
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#valueParameter",
               "type": "xsd:string"
             },
             {
-              "url": "http://semweb.mmlab.be/ns/grel#subStringParameter",
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#subStringParameter",
               "type": "xsd:string"
             }
           ]
         },
         {
-          "url": "http://semweb.mmlab.be/ns/grel#booleanMatch",
+          "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#booleanMatch",
           "name": "booleanMatch",
           "parameters": [
             {
-              "url": "http://semweb.mmlab.be/ns/grel#valueParameter",
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#valueParameter",
               "type": "xsd:string"
             },
             {
-              "url": "http://semweb.mmlab.be/ns/grel#regexParameter",
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#regexParameter",
+              "type": "xsd:string"
+            }
+          ]
+        },
+        {
+          "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#toUppercase",
+          "name": "toUppercase",
+          "parameters": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#valueParameter",
+              "type": "xsd:string"
+            }
+          ]
+        },
+        {
+          "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#escape",
+          "name": "escape",
+          "parameters": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#valueParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#modeParameter",
               "type": "xsd:string"
             }
           ]
