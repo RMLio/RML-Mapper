@@ -58,9 +58,12 @@ public class ConcreteFunctionProcessor {
         }
         Object result = fn.execute(parameters);
         if(result != null) {
-            return (ArrayList<String>) result;
+            // TODO shouln't return ArrayList<String> but ArrayList<Object>, with each Object converted to the correct data type based on the function description
+            ArrayList<String> list = new ArrayList<>();
+            list.add(result.toString());
+            return list;
         } else {
-            return new ArrayList<String>();
+            return new ArrayList<>();
         }
     }
 }

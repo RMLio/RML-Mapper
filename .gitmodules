@@ -20,3 +20,6 @@
 [submodule "RML-MetadataHandler"]
 	path = RML-Metadata
 	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-Metadata.git
+[submodule "DBpedia-Mapper"]
+	path = DBpedia-Mapper
+	url = https://git.datasciencelab.ugent.be/fno/DBpedia-Mapper.git

@@ -38,6 +38,7 @@
 	<module>RML-DataRetrieval</module>
         <module>RML-Metadata</module>
         <module>RML-LogicalSourceHandler</module>
+        <module>DBpedia-Mapper</module>
   </modules>
 
     <build>
