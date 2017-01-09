@@ -1,25 +1,32 @@
 [submodule "RML-Processor"]
 	path = RML-Processor
 	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-Processor.git
-	branch = metadata
+	branch = feature-function
 [submodule "RML-Model"]
 	path = RML-Model
 	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-Model.git
+	branch = feature-function
 [submodule "RML-ConditionsHandler"]
 	path = RML-Condition
 	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-Condition.git
+	branch = feature-function
 [submodule "RML-DataRetrieval"]
 	path = RML-DataRetrieval
 	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-DataRetrieval.git
+	branch = eclipse
 [submodule "RML-MapDocHandler"]
 	path = RML-MapDocHandler
 	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-MapDocHandler.git
+	branch = eclipse
 [submodule "RML-LogicalSourceHandler"]
 	path = RML-LogicalSourceHandler
 	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-LogicalSourceHandler.git
+	branch = feature-function
 [submodule "RML-MetadataHandler"]
 	path = RML-Metadata
 	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-Metadata.git
+	branch = feature-function
 [submodule "DBpedia-Mapper"]
 	path = DBpedia-Mapper
 	url = https://git.datasciencelab.ugent.be/fno/DBpedia-Mapper.git
+	branch = master
