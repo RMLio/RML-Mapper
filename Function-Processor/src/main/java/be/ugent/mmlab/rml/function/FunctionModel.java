@@ -38,13 +38,27 @@ public class FunctionModel {
 
     private Object[] getParameters(Map<String, String> parameters) {
         Object[] args = new Object[this.parameters.length];
+        Class[] paramTypes = this.method.getParameterTypes();
         for (int i = 0; i < this.parameters.length; i++) {
             if(parameters.get(this.parameters[i]) != null) {
-                args[i] = parameters.get(this.parameters[i]);
+                args[i] = parseParameter(parameters.get(this.parameters[i]), paramTypes[i]);
             } else {
                 args[i] = null;
             }
         }
         return args;
+    }
+
+    private Object parseParameter(String parameter, Class type) {
+        switch (type.getName()) {
+            case "java.lang.String":
+                return parameter;
+            case "int":
+                return Integer.parseInt(parameter);
+            case "double":
+                return Double.parseDouble(parameter);
+            default:
+                throw new Error("Couldn't derive " + type.getName() + " from " + parameter);
+        }
     }
 }

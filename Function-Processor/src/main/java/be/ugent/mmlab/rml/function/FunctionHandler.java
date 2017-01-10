@@ -86,6 +86,10 @@ public class FunctionHandler {
         switch (type) {
             case "xsd:string":
                 return String.class;
+            case "xsd:integer":
+                return int.class;
+            case "xsd:decimal":
+                return double.class;
             default:
                 throw new Error("Couldn't derive type from " + type);
         }
