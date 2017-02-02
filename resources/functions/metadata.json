@@ -1,0 +1,279 @@
+{
+  "files": [
+    {
+      "path": "GrelFunctions.jar",
+      "mime": "application/java-archive",
+      "name": "GrelFunctions",
+      "functions": [
+        {
+          "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#isSet",
+          "name": "isSet",
+          "parameters": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#valueParameter",
+              "type": "xsd:string"
+            }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#boolOutput",
+              "type": "xsd:boolean"
+            }
+          ]
+        },
+        {
+          "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#contains",
+          "name": "contains",
+          "parameters": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#valueParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#subStringParameter",
+              "type": "xsd:string"
+            }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#boolOutput",
+              "type": "xsd:boolean"
+            }
+          ]
+        },
+        {
+          "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#booleanMatch",
+          "name": "booleanMatch",
+          "parameters": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#valueParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#regexParameter",
+              "type": "xsd:string"
+            }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#boolOutput",
+              "type": "xsd:boolean"
+            }
+          ]
+        },
+        {
+          "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#toUppercase",
+          "name": "toUppercase",
+          "parameters": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#valueParameter",
+              "type": "xsd:string"
+            }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#stringOutput",
+              "type": "xsd:string"
+            }
+          ]
+        },
+        {
+          "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#escape",
+          "name": "escape",
+          "parameters": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#valueParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#modeParameter",
+              "type": "xsd:string"
+            }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#stringOutput",
+              "type": "xsd:string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "SimilarityFunctions.jar",
+      "mime": "application/java-archive",
+      "name": "SimilarityFunctions",
+      "functions": [
+        {
+          "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#levenshtein",
+          "name": "levenshtein",
+          "parameters": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#fromString",
+              "type": "xsd:string"
+            },
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#toString",
+              "type": "xsd:string"
+            },
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#thresholdInt",
+              "type": "xsd:integer"
+            }
+          ]
+        },
+        {
+          "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#jaroWinkler",
+          "name": "jaroWinkler",
+          "parameters": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#fromString",
+              "type": "xsd:string"
+            },
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#toString",
+              "type": "xsd:string"
+            },
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#thresholdDouble",
+              "type": "xsd:decimal"
+            }
+          ]
+        },
+        {
+          "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#cosine",
+          "name": "cosine",
+          "parameters": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#fromString",
+              "type": "xsd:string"
+            },
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#toString",
+              "type": "xsd:string"
+            },
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#thresholdDouble",
+              "type": "xsd:decimal"
+            }
+          ]
+        },
+        {
+          "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#jaccard",
+          "name": "jaccard",
+          "parameters": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#fromString",
+              "type": "xsd:string"
+            },
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#toString",
+              "type": "xsd:string"
+            },
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#thresholdDouble",
+              "type": "xsd:decimal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "DBpediaFunctions.jar",
+      "mime": "application/java-archive",
+      "name": "DBpediaFunctions",
+      "functions": [
+        {
+          "url": "http://dbpedia.org/function/latFunction",
+          "name": "latFunction",
+          "parameters": [
+            {
+              "url" : "http://dbpedia.org/function/latParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/latDegreesParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/latMinutesParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/latSecondsParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/latDirectionParameter",
+              "type" : "xsd:string"
+            }
+          ]
+        },
+        {
+          "url": "http://dbpedia.org/function/lonFunction",
+          "name": "lonFunction",
+          "parameters": [
+            {
+              "url" : "http://dbpedia.org/function/lonParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/lonDegreesParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/lonMinutesParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/lonSecondsParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/lonDirectionParameter",
+              "type" : "xsd:string"
+            }
+          ]
+        },
+        {
+          "url": "http://dbpedia.org/function/simplePropertyFunction",
+          "name": "simplePropertyFunction",
+          "parameters": [
+            {
+              "url" : "http://dbpedia.org/function/propertyParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/factorParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/transformParameter",
+              "type" : "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/selectParameter",
+              "type" : "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/prefixParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/suffixParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/unitParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/dataTypeParameter",
+              "type": "xsd:string"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

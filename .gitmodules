@@ -14,8 +14,12 @@
 	path = RML-MapDocHandler
 	url = https://github.com/RMLio/RML-MapDocHandler.git
 [submodule "RML-MetadataHandler"]
-	path = RML-MetadataHandler
+	path = RML-Metadata
 	url = https://github.com/RMLio/RML-MetadataHandler.git
 [submodule "RML-LogicalSourceHandler"]
 	path = RML-LogicalSourceHandler
 	url = https://github.com/RMLio/RML-LogicalSourceHandler.git
+[submodule "DBpedia-Mapper"]
+	path = DBpedia-Mapper
+	url = https://git.datasciencelab.ugent.be/fno/DBpedia-Mapper.git
+	branch = master
