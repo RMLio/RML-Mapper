@@ -5,6 +5,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Map;
 
+import org.eclipse.rdf4j.model.Value;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -46,22 +47,19 @@ public class ConcreteFunctionProcessor {
     private static final Logger log =
             LoggerFactory.getLogger(ConcreteFunctionProcessor.class);
 
-    public ArrayList<String> processFunction(
+    public ArrayList<Value> processFunction(
             String function, Map<String, String> parameters) {
         FunctionModel fn = handler.get(function);
 
         if (fn == null) {
-            System.err.println("The function " + function + " was not defined.");
             log.error("The function " + function + " was not defined.");
             //TODO: wmaroy:
             return null;
         }
-        Object result = fn.execute(parameters);
+        log.debug(parameters.toString());
+        ArrayList<Value> result = fn.execute(parameters);
         if(result != null) {
-            // TODO shouln't return ArrayList<String> but ArrayList<Object>, with each Object converted to the correct data type based on the function description
-            ArrayList<String> list = new ArrayList<>();
-            list.add(result.toString());
-            return list;
+            return result;
         } else {
             return new ArrayList<>();
         }

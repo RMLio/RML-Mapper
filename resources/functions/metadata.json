@@ -13,6 +13,12 @@
               "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#valueParameter",
               "type": "xsd:string"
             }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#boolOutput",
+              "type": "xsd:boolean"
+            }
           ]
         },
         {
@@ -26,6 +32,12 @@
             {
               "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#subStringParameter",
               "type": "xsd:string"
+            }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#boolOutput",
+              "type": "xsd:boolean"
             }
           ]
         },
@@ -41,6 +53,12 @@
               "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#regexParameter",
               "type": "xsd:string"
             }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#boolOutput",
+              "type": "xsd:boolean"
+            }
           ]
         },
         {
@@ -49,6 +67,12 @@
           "parameters": [
             {
               "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#valueParameter",
+              "type": "xsd:string"
+            }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#stringOutput",
               "type": "xsd:string"
             }
           ]
@@ -63,6 +87,12 @@
             },
             {
               "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#modeParameter",
+              "type": "xsd:string"
+            }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#stringOutput",
               "type": "xsd:string"
             }
           ]

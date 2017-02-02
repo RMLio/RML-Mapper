@@ -70,9 +70,18 @@ public class FunctionHandler {
                     params[k] = this.getParamType(param.getAsString("type"));
                     args[k] = param.getAsString("url");
                 }
+                String outs[] = new String[0];
+                if (functionObj.containsKey("outputs")) {
+                    JSONArray outputs = (JSONArray) functionObj.get("outputs");
+                    outs = new String[outputs.size()];
+                    for (int k = 0; k < outputs.size(); k++) {
+                        JSONObject out = (JSONObject) outputs.get(k);
+                        outs[k] = out.getAsString("type");
+                    }
+                }
                 FunctionModel fn = null;
                 try {
-                    fn = new FunctionModel(functionObj.getAsString("url"), cls.getDeclaredMethod(functionObj.getAsString("name"), params), args);
+                    fn = new FunctionModel(functionObj.getAsString("url"), cls.getDeclaredMethod(functionObj.getAsString("name"), params), args, outs);
                 } catch (NoSuchMethodException e) {
                     e.printStackTrace();
                 }
