@@ -100,85 +100,6 @@
       ]
     },
     {
-      "path": "SimilarityFunctions.jar",
-      "mime": "application/java-archive",
-      "name": "SimilarityFunctions",
-      "functions": [
-        {
-          "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#levenshtein",
-          "name": "levenshtein",
-          "parameters": [
-            {
-              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#fromString",
-              "type": "xsd:string"
-            },
-            {
-              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#toString",
-              "type": "xsd:string"
-            },
-            {
-              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#thresholdInt",
-              "type": "xsd:integer"
-            }
-          ]
-        },
-        {
-          "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#jaroWinkler",
-          "name": "jaroWinkler",
-          "parameters": [
-            {
-              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#fromString",
-              "type": "xsd:string"
-            },
-            {
-              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#toString",
-              "type": "xsd:string"
-            },
-            {
-              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#thresholdDouble",
-              "type": "xsd:decimal"
-            }
-          ]
-        },
-        {
-          "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#cosine",
-          "name": "cosine",
-          "parameters": [
-            {
-              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#fromString",
-              "type": "xsd:string"
-            },
-            {
-              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#toString",
-              "type": "xsd:string"
-            },
-            {
-              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#thresholdDouble",
-              "type": "xsd:decimal"
-            }
-          ]
-        },
-        {
-          "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#jaccard",
-          "name": "jaccard",
-          "parameters": [
-            {
-              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#fromString",
-              "type": "xsd:string"
-            },
-            {
-              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#toString",
-              "type": "xsd:string"
-            },
-            {
-              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#thresholdDouble",
-              "type": "xsd:decimal"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "path": "DBpediaFunctions.jar",
       "mime": "application/java-archive",
       "name": "DBpediaFunctions",
@@ -187,6 +108,10 @@
           "url": "http://dbpedia.org/function/latFunction",
           "name": "latFunction",
           "parameters": [
+            {
+              "url" : "http://dbpedia.org/function/coordParameter",
+              "type": "xsd:string"
+            },
             {
               "url" : "http://dbpedia.org/function/latParameter",
               "type": "xsd:string"
@@ -213,6 +138,10 @@
           "url": "http://dbpedia.org/function/lonFunction",
           "name": "lonFunction",
           "parameters": [
+            {
+              "url" : "http://dbpedia.org/function/coordParameter",
+              "type": "xsd:string"
+            },
             {
               "url" : "http://dbpedia.org/function/lonParameter",
               "type": "xsd:string"
