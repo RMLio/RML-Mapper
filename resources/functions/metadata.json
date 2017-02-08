@@ -105,6 +105,44 @@
       "name": "DBpediaFunctions",
       "functions": [
         {
+          "url": "http://dbpedia.org/function/equals",
+          "name": "equals",
+          "parameters": [
+            {
+            "url" : "http://dbpedia.org/function/equals/propertyParameter",
+            "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/equals/valueParameter",
+              "type": "xsd:string"
+            }
+          ]
+        },
+        {
+          "url": "http://dbpedia.org/function/isSet",
+          "name": "equals",
+          "parameters": [
+            {
+              "url" : "http://dbpedia.org/function/isSet/propertyParameter",
+              "type": "xsd:string"
+            }
+          ]
+        },
+        {
+          "url": "http://dbpedia.org/function/contains",
+          "name": "equals",
+          "parameters": [
+            {
+              "url" : "http://dbpedia.org/function/contains/propertyParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/contains/valueParameter",
+              "type": "xsd:string"
+            }
+          ]
+        },
+        {
           "url": "http://dbpedia.org/function/latFunction",
           "name": "latFunction",
           "parameters": [
