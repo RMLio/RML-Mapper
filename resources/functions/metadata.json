@@ -105,12 +105,40 @@
       "name": "DBpediaFunctions",
       "functions": [
         {
+          "url": "http://dbpedia.org/function/startDateFunction",
+          "name": "startDateFunction",
+          "parameters": [
+            {
+            "url" : "http://dbpedia.org/function/startDatePropertyParameter",
+            "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/startDateOntologyParameter",
+              "type": "xsd:string"
+            }
+          ]
+        },
+        {
+          "url": "http://dbpedia.org/function/endDateFunction",
+          "name": "endDateFunction",
+          "parameters": [
+            {
+              "url" : "http://dbpedia.org/function/endDatePropertyParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/endDateOntologyParameter",
+              "type": "xsd:string"
+            }
+          ]
+        },
+        {
           "url": "http://dbpedia.org/function/equals",
           "name": "equals",
           "parameters": [
             {
-            "url" : "http://dbpedia.org/function/equals/propertyParameter",
-            "type": "xsd:string"
+              "url" : "http://dbpedia.org/function/equals/propertyParameter",
+              "type": "xsd:string"
             },
             {
               "url" : "http://dbpedia.org/function/equals/valueParameter",
@@ -120,7 +148,7 @@
         },
         {
           "url": "http://dbpedia.org/function/isSet",
-          "name": "equals",
+          "name": "isSet",
           "parameters": [
             {
               "url" : "http://dbpedia.org/function/isSet/propertyParameter",
@@ -130,7 +158,7 @@
         },
         {
           "url": "http://dbpedia.org/function/contains",
-          "name": "equals",
+          "name": "contains",
           "parameters": [
             {
               "url" : "http://dbpedia.org/function/contains/propertyParameter",
@@ -235,7 +263,7 @@
               "type": "xsd:string"
             },
             {
-              "url" : "http://dbpedia.org/function/dataTypeParameter",
+              "url" : "http://dbpedia.org/function/ontologyPropertyParameter",
               "type": "xsd:string"
             }
           ]
