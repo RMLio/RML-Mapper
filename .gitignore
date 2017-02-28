@@ -1,0 +1,12 @@
+.idea/
+/target/
+/RML-Metadata/target/
+/Function-Processor/target/
+/RML-LogicalSourceHandler/target/
+/RML-Mapper-copy/nbproject/private/
+log/
+/data/
+*.log
+*.iml
+*.yml
+*.jar

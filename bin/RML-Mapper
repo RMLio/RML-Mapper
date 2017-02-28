@@ -1,7 +1,7 @@
 compile () {
   echo "Compiling RML-Mapper started..."
   mvn clean install -DskipTests
-  cp RML-Processor/target/RML-Processor-0.2.jar RML-Mapper.jar
+  cp RML-Processor/target/RML-Processor-0.4.jar RML-Mapper.jar
   echo "Compiling RML-Mapper finished..."
 }
 
@@ -13,7 +13,7 @@ execute () {
   
   #check if RMLMapper.jar exists
   if [ ! -d "RML-Mapper.jar" ]; then
-    cp RML-Processor/target/RML-Processor-0.2.jar RML-Mapper.jar
+    cp RML-Processor/target/RML-Processor-0.4.jar RML-Mapper.jar
   fi
   
   #excute the mapping document
