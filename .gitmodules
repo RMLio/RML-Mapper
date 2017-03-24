@@ -1,25 +1,28 @@
 [submodule "RML-Processor"]
 	path = RML-Processor
 	url = https://github.com/RMLio/RML-Processor.git
+	branch = extension-fno
 [submodule "RML-Model"]
 	path = RML-Model
 	url = https://github.com/RMLio/RML-Model.git
+	branch = extension-fno
 [submodule "RML-Condition"]
 	path = RML-Condition
 	url = https://github.com/RMLio/RML-Condition.git
+	branch = extension-fno
 [submodule "RML-DataRetrieval"]
 	path = RML-DataRetrieval
 	url = https://github.com/RMLio/RML-DataRetrieval.git
+	branch = extension-fno
 [submodule "RML-MapDocHandler"]
 	path = RML-MapDocHandler
 	url = https://github.com/RMLio/RML-MapDocHandler.git
-[submodule "RML-MetadataHandler"]
-	path = RML-Metadata
-	url = https://github.com/RMLio/RML-MetadataHandler.git
+	branch = extension-fno
 [submodule "RML-LogicalSourceHandler"]
 	path = RML-LogicalSourceHandler
 	url = https://github.com/RMLio/RML-LogicalSourceHandler.git
-[submodule "DBpedia-Mapper"]
-	path = DBpedia-Mapper
-	url = https://git.datasciencelab.ugent.be/fno/DBpedia-Mapper.git
-	branch = master
+	branch = extension-fno
+[submodule "RML-MetadataHandler"]
+	path = RML-MetadataHandler
+	url = https://github.com/RMLio/RML-MetadataHandler.git
+	branch = extension-fno
