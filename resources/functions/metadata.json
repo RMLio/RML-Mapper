@@ -1,0 +1,134 @@
+{
+  "files": [
+    {
+      "path": "GrelFunctions.jar",
+      "mime": "application/java-archive",
+      "name": "GrelFunctions",
+      "functions": [
+        {
+          "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#isSet",
+          "name": "isSet",
+          "parameters": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#valueParameter",
+              "type": "xsd:string"
+            }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#boolOutput",
+              "type": "xsd:boolean"
+            }
+          ]
+        },
+        {
+          "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#contains",
+          "name": "contains",
+          "parameters": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#valueParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#subStringParameter",
+              "type": "xsd:string"
+            }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#boolOutput",
+              "type": "xsd:boolean"
+            }
+          ]
+        },
+        {
+          "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#booleanMatch",
+          "name": "booleanMatch",
+          "parameters": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#valueParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#regexParameter",
+              "type": "xsd:string"
+            }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#boolOutput",
+              "type": "xsd:boolean"
+            }
+          ]
+        },
+        {
+          "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#toUppercase",
+          "name": "toUppercase",
+          "parameters": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#valueParameter",
+              "type": "xsd:string"
+            }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#stringOutput",
+              "type": "xsd:string"
+            }
+          ]
+        },
+        {
+          "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#escape",
+          "name": "escape",
+          "parameters": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#valueParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#modeParameter",
+              "type": "xsd:string"
+            }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#stringOutput",
+              "type": "xsd:string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "SimilarityFunctions.jar",
+      "mime": "application/java-archive",
+      "name": "SimilarityFunctions",
+      "functions": [
+        {
+          "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#jaccard",
+          "name": "jaccard",
+          "parameters": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#fromString",
+              "type": "xsd:string"
+            },
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#toString",
+              "type": "xsd:string"
+            },
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#thresholdDouble",
+              "type": "xsd:decimal"
+            }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#toString",
+              "type": "xsd:boolean"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

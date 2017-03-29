@@ -1,0 +1,11 @@
+language: java
+before_install: chmod +x bin/RML-Mapper
+install: bin/RML-Mapper
+before_delpoy: cp RML-Processor/target/RML-Processor-*.jar RML-Mapper.jar
+deploy:
+  provider: releases
+  api_key:
+    secure: jhYYzG1G2aenAERpX3cXFQ3pXgK+AYfa3Es1z6pn5DR71Yfp8jwzhXiMT2khI/HewJDxA0ZsD6izzuk9kc4bXT7f5ACvXv5wp/COJOKBaZ4AcBTaLhZgTCC3lzQMHEg5apNq0/RZe8wHheJI4qYFXuGBy3IiUUmDPBO14wLG/HZu5FiXe/+dc5vlW8ES7AnqgKKxh3cYSlK8ACMCffmPMdY4k5d7YFV2i/EXcc9Ms1oVG+yMDRx9sZu15p6LNF+dJa5JUTKX8prwuVPr87PezLi/TxwCFqPtU9XyE24QF0xsOsAZFadqA71D4XNMq1VapeI9lL8WwCSyygMFBlYce+QTqgnkZmZrumzcj7iPwsN07mPcl8uMfI1Yjj/5oP13pkdPMGoJ/JshYRLof/QyjlMJBsT+6xwvJRTIJYsjAEQraSD/nOOCZ1eAi+Rpdpl2ed7KOv+sjRJ2kZdGaLq7hvLu/sb9YlkpMXUS9965arNoTghx5uMsVHF0QHhRokNSTUL+y+rPZcdz0YTAcfO0UJiZzEY4+gVbVZ9SIS95JPXSDiG1fGZMUzKi8yyPRe3Z5o5G96DDnFlNKh9hSXHsmUIRe2gY301IQRaHMgWHyxOmWm9heAnhIBUPeBDM6/1Ew0oWQPe6CSc4xIZpKCBX77obNld9f7qOW70+1SC/B0o=
+  file: RML-Processor/target/RML-Processor-0.2.jar
+  on:
+    repo: RMLio/RML-Mapper

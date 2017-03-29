@@ -1,18 +1,28 @@
 [submodule "RML-Processor"]
 	path = RML-Processor
-	url = git@git.mmlab.be:rml/RML-Processor.git
+	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-Processor.git
+	branch = staging-functions
 [submodule "RML-Model"]
 	path = RML-Model
-	url = git@git.mmlab.be:rml/RML-Model.git
-[submodule "RML-Condition"]
+	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-Model.git
+	branch = staging-functions
+[submodule "RML-ConditionsHandler"]
 	path = RML-Condition
-	url = git@git.mmlab.be:rml/RML-Condition.git
+	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-Condition.git
+	branch = release-functions
 [submodule "RML-DataRetrieval"]
 	path = RML-DataRetrieval
-	url = git@git.mmlab.be:rml/RML-DataRetrieval.git
+	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-DataRetrieval.git
+	branch = development
 [submodule "RML-MapDocHandler"]
 	path = RML-MapDocHandler
-	url = git@git.mmlab.be:rml/RML-MapDocHandler.git
-[submodule "RML-Metadata"]
-	path = RML-Metadata
-	url = git@git.mmlab.be:rml/RML-Metadata.git
+	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-MapDocHandler.git
+	branch = staging-functions
+[submodule "RML-LogicalSourceHandler"]
+	path = RML-LogicalSourceHandler
+	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-LogicalSourceHandler.git
+	branch = staging-functions
+[submodule "RML-MetadataHandler"]
+	path = RML-MetadataHandler
+	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-Metadata.git
+	branch = staging-functions
