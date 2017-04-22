@@ -144,6 +144,12 @@
               "url" : "http://dbpedia.org/function/equals/valueParameter",
               "type": "xsd:string"
             }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#boolOutput",
+              "type": "xsd:boolean"
+            }
           ]
         },
         {
@@ -153,6 +159,12 @@
             {
               "url" : "http://dbpedia.org/function/isSet/propertyParameter",
               "type": "xsd:string"
+            }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#boolOutput",
+              "type": "xsd:boolean"
             }
           ]
         },
@@ -167,6 +179,12 @@
             {
               "url" : "http://dbpedia.org/function/contains/valueParameter",
               "type": "xsd:string"
+            }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#boolOutput",
+              "type": "xsd:boolean"
             }
           ]
         },
@@ -265,6 +283,58 @@
             {
               "url" : "http://dbpedia.org/function/ontologyPropertyParameter",
               "type": "xsd:string"
+            }
+          ]
+        },
+        {
+          "url": "http://dbpedia.org/function/extract-entity",
+          "name": "extractEntity",
+          "parameters": [
+            {
+              "url" : "http://dbpedia.org/parameter/property",
+              "type": "xsd:string"
+            }
+          ],
+          "outputs": [
+            {
+              "url": "http://dbpedia.org/output/iri",
+              "type": "xsd:anyURI"
+            }
+          ]
+        },
+        {
+          "url": "http://dbpedia.org/function/extract-string",
+          "name": "extractString",
+          "parameters": [
+            {
+              "url" : "http://dbpedia.org/parameter/property",
+              "type": "xsd:string"
+            }
+          ],
+          "outputs": [
+            {
+              "url": "http://dbpedia.org/output/string",
+              "type": "xsd:string"
+            }
+          ]
+        },
+        {
+          "url": "http://dbpedia.org/function/extract-date",
+          "name": "extractDate",
+          "parameters": [
+            {
+              "url" : "http://dbpedia.org/parameter/property",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/parameter/datedatatype",
+              "type": "xsd:string"
+            }
+          ],
+          "outputs": [
+            {
+              "url": "http://dbpedia.org/output/iri",
+              "type": "xsd:date"
             }
           ]
         }
