@@ -5,6 +5,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Map;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
 import org.eclipse.rdf4j.model.Value;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -53,7 +54,7 @@ public class ConcreteFunctionProcessor {
 
         if (fn == null) {
             log.error("The function " + function + " was not defined.");
-            //TODO: wmaroy:
+            //TODO: wmaroy
             return null;
         }
         log.debug(parameters.toString());
