@@ -79,13 +79,13 @@ public class DBpediaFunctionProcessor {
             case "http://dbpedia.org/function/contains":
                 return processContainsFunction(parameters);
 
-            case "http://dbpedia.org/function/extractDate":
+            case "http://dbpedia.org/function/extract-date":
                 return processExtractDateFunction(parameters);
 
-            case "http://dbpedia.org/function/extractEntity":
+            case "http://dbpedia.org/function/extract-entity":
                 return processExtractEntity(parameters);
 
-            case "http://dbpedia.org/function/extractString":
+            case "http://dbpedia.org/function/extract-string":
                 return processExtractStringFunction(parameters);
         }
 
