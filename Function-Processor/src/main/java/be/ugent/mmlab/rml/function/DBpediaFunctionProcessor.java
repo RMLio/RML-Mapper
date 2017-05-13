@@ -294,7 +294,7 @@ public class DBpediaFunctionProcessor {
         ArrayList<String> results = DBpediaFunctions.extractEntity(property);
         log.debug("Result: " + results);
 
-        return transformToLiteralValues(results, null);
+        return transformToIRIs(results);
     }
 
 
@@ -308,6 +308,19 @@ public class DBpediaFunctionProcessor {
             }
         }
 
+        return values;
+    }
+
+
+    private ArrayList<Value> transformToIRIs(ArrayList<String> iris) {
+        ArrayList<Value> values = new ArrayList<>();
+        if(iris != null) {
+            for (String iri : iris) {
+                if(iri != null) {
+                    values.add(vf.createIRI(iri));
+                }
+            }
+        }
         return values;
     }
 
