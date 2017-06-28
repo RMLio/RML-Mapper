@@ -55,7 +55,7 @@ public class ConcreteFunctionProcessor {
         if (fn == null) {
             log.error("The function " + function + " was not defined.");
             //TODO: wmaroy
-            return null;
+            return new ArrayList<>();
         }
         log.debug(parameters.toString());
         ArrayList<Value> result = fn.execute(parameters);

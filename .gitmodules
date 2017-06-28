@@ -25,4 +25,8 @@
 [submodule "RML-MetadataHandler"]
 	path = RML-Metadata
 	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-Metadata.git
-	branch = feature-function
+	branch = development
+[submodule "dbpedia-functions"]
+	path = dbpedia-parsing-functions-scala
+	url = https://github.com/FnOio/dbpedia-parsing-functions-scala.git
+	branch = master

@@ -21,6 +21,7 @@ public class DBpediaFunctionProcessor {
 
 
     private static DBpediaFunctionProcessor instance = null;
+    private static ConcreteFunctionProcessor concreteInstance = null;
     private static final Logger log = LoggerFactory.getLogger(DBpediaFunctionProcessor.class);
     private SimpleValueFactory vf = SimpleValueFactory.getInstance();
 
@@ -34,10 +35,11 @@ public class DBpediaFunctionProcessor {
     /**
      * Returns the instance of this class
      * Instantiate an instance if instance is null
-     * @return
+     *
+     * @return DBpediaFunctionProcessor
      */
     public static DBpediaFunctionProcessor getInstance() {
-        if(instance == null) {
+        if (instance == null) {
             instance = new DBpediaFunctionProcessor();
         }
         return instance;
@@ -45,6 +47,7 @@ public class DBpediaFunctionProcessor {
 
     /**
      * Delegates given function to its processing function
+     *
      * @param function
      * @param parameters
      * @return
@@ -87,19 +90,21 @@ public class DBpediaFunctionProcessor {
 
             case "http://dbpedia.org/function/extract-string":
                 return processExtractStringFunction(parameters);
-        }
 
-        return new ArrayList<>();
+            default:
+                if (concreteInstance == null) {
+                    concreteInstance = ConcreteFunctionProcessor.getInstance();
+                }
+                return concreteInstance.processFunction(function, parameters);
+        }
 
     }
 
     /**
-     *
      * @param parameters
      * @return
      */
     private ArrayList<Value> processSimplePropertyFunction(Map<String, String> parameters, IRI datatype) {
-
 
 
         String property = parameters.get("http://dbpedia.org/function/propertyParameter");
@@ -118,7 +123,6 @@ public class DBpediaFunctionProcessor {
     }
 
     /**
-     *
      * @param parameters
      * @return
      */
@@ -139,7 +143,6 @@ public class DBpediaFunctionProcessor {
 
 
     /**
-     *
      * @param parameters
      * @return
      */
@@ -159,7 +162,6 @@ public class DBpediaFunctionProcessor {
     }
 
     /**
-     *
      * @param parameters
      * @return
      */
@@ -177,7 +179,6 @@ public class DBpediaFunctionProcessor {
     }
 
     /**
-     *
      * @param parameters
      * @return
      */
@@ -194,7 +195,6 @@ public class DBpediaFunctionProcessor {
     }
 
     /**
-     *
      * @param parameters
      * @return
      */
@@ -212,7 +212,6 @@ public class DBpediaFunctionProcessor {
     }
 
     /**
-     *
      * @param parameters
      * @return
      */
@@ -221,7 +220,7 @@ public class DBpediaFunctionProcessor {
         String property = parameters.get("http://dbpedia.org/function/isSet/propertyParameter");
 
         ArrayList<Boolean> results = new ArrayList<>();
-        if(parameters.size() == 0) {
+        if (parameters.size() == 0) {
             results.add(false);
         } else {
             results.add(true);
@@ -233,7 +232,6 @@ public class DBpediaFunctionProcessor {
     }
 
     /**
-     *
      * @param parameters
      * @return
      */
@@ -250,7 +248,6 @@ public class DBpediaFunctionProcessor {
     }
 
     /**
-     *
      * @param parameters
      * @return
      */
@@ -267,7 +264,6 @@ public class DBpediaFunctionProcessor {
     }
 
     /**
-     *
      * @param parameters
      * @return
      */
@@ -283,7 +279,6 @@ public class DBpediaFunctionProcessor {
     }
 
     /**
-     *
      * @param parameters
      * @return
      */
@@ -300,9 +295,9 @@ public class DBpediaFunctionProcessor {
 
     private ArrayList<Value> transformToBooleanValues(ArrayList<Boolean> booleans) {
         ArrayList<Value> values = new ArrayList<>();
-        if(booleans != null) {
+        if (booleans != null) {
             for (Boolean bool : booleans) {
-                if(bool != null) {
+                if (bool != null) {
                     values.add(vf.createLiteral(bool)); // the type will be assigned in the EF :)
                 }
             }
@@ -314,9 +309,9 @@ public class DBpediaFunctionProcessor {
 
     private ArrayList<Value> transformToIRIs(ArrayList<String> iris) {
         ArrayList<Value> values = new ArrayList<>();
-        if(iris != null) {
+        if (iris != null) {
             for (String iri : iris) {
-                if(iri != null) {
+                if (iri != null) {
                     values.add(vf.createIRI(iri));
                 }
             }
@@ -326,14 +321,15 @@ public class DBpediaFunctionProcessor {
 
     /**
      * Transforms strings into Literal Values
+     *
      * @param literals
      * @return
      */
     private ArrayList<Value> transformToLiteralValues(ArrayList<String> literals, IRI datatype) {
         ArrayList<Value> values = new ArrayList<>();
-        if(literals != null) {
+        if (literals != null) {
             for (String literal : literals) {
-                if(literal != null) {
+                if (literal != null) {
                     if (datatype == null) {
                         values.add(vf.createLiteral(literal)); // the type will be assigned in the EF :)
                     } else {
