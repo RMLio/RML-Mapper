@@ -23,4 +23,3 @@ Update RML-Mapper
 -----------------
 
     git pull --recurse-submodules
-    git submodule update --recursive
