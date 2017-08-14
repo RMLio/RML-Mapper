@@ -115,8 +115,9 @@ public class DBpediaFunctionProcessor {
         String suffix = parameters.get("http://dbpedia.org/function/suffixParameter");
         String unit = parameters.get("http://dbpedia.org/function/unitParameter");
         String ontology = parameters.get("http://dbpedia.org/function/ontologyPropertyParameter");
+        String language = parameters.get("http://dbpedia.org/function/languageParameter");
 
-        ArrayList<String> result = DBpediaFunctions.simplePropertyFunction(property, factor, transform, select, prefix, suffix, unit, ontology);
+        ArrayList<String> result = DBpediaFunctions.simplePropertyFunction(property, factor, transform, select, prefix, suffix, unit, ontology, language);
         log.debug("Result: " + result);
 
         return transformToLiteralValues(result, datatype); // the type will be assigned in the EF :)
@@ -134,8 +135,9 @@ public class DBpediaFunctionProcessor {
         String latMinutes = parameters.get("http://dbpedia.org/function/latMinutesParameter");
         String latSeconds = parameters.get("http://dbpedia.org/function/latSecondsParameter");
         String latDirection = parameters.get("http://dbpedia.org/function/latDirectionParameter");
+        String language = parameters.get("http://dbpedia.org/function/languageParameter");
 
-        ArrayList<String> result = DBpediaFunctions.latFunction(coord, lat, latDegrees, latMinutes, latSeconds, latDirection);
+        ArrayList<String> result = DBpediaFunctions.latFunction(coord, lat, latDegrees, latMinutes, latSeconds, latDirection, language);
         log.debug("Result: " + result);
 
         return transformToLiteralValues(result, null); // the type will be assigned in the EF :)
@@ -154,8 +156,9 @@ public class DBpediaFunctionProcessor {
         String lonMinutes = parameters.get("http://dbpedia.org/function/lonMinutesParameter");
         String lonSeconds = parameters.get("http://dbpedia.org/function/lonSecondsParameter");
         String lonDirection = parameters.get("http://dbpedia.org/function/lonDirectionParameter");
+        String language = parameters.get("http://dbpedia.org/function/languageParameter");
 
-        ArrayList<String> result = DBpediaFunctions.latFunction(coord, lon, lonDegrees, lonMinutes, lonSeconds, lonDirection);
+        ArrayList<String> result = DBpediaFunctions.latFunction(coord, lon, lonDegrees, lonMinutes, lonSeconds, lonDirection, language);
         log.debug("Result: " + result);
 
         return transformToLiteralValues(result, null); // the type will be assigned in the EF :)
@@ -169,9 +172,10 @@ public class DBpediaFunctionProcessor {
 
         String startDate = parameters.get("http://dbpedia.org/function/startDatePropertyParameter");
         String startDateOntology = parameters.get("http://dbpedia.org/function/startDateOntologyParameter");
+        String language = parameters.get("http://dbpedia.org/function/languageParameter");
 
         ArrayList<String> results = new ArrayList<>();
-        results.add(DBpediaFunctions.startDateFunction(startDate, startDateOntology));
+        results.add(DBpediaFunctions.startDateFunction(startDate, startDateOntology, language));
         log.debug("Result: " + results);
 
         return transformToLiteralValues(results, null);
@@ -186,9 +190,10 @@ public class DBpediaFunctionProcessor {
 
         String endDate = parameters.get("http://dbpedia.org/function/endDatePropertyParameter");
         String endDateOntology = parameters.get("http://dbpedia.org/function/endDateOntologyParameter");
+        String language = parameters.get("http://dbpedia.org/function/languageParameter");
 
         ArrayList<String> results = new ArrayList<>();
-        results.add(DBpediaFunctions.endDateFunction(endDate, endDateOntology));
+        results.add(DBpediaFunctions.endDateFunction(endDate, endDateOntology, language));
         log.debug("Result: " + results);
 
         return transformToLiteralValues(results, null);
