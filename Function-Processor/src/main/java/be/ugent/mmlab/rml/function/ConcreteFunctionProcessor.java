@@ -48,7 +48,7 @@ public class ConcreteFunctionProcessor {
             LoggerFactory.getLogger(ConcreteFunctionProcessor.class);
 
     public ArrayList<Value> processFunction(
-            String function, Map<String, String> parameters) {
+            String function, Map<String, Object> parameters) {
         FunctionModel fn = handler.get(function);
 
         if (fn == null) {

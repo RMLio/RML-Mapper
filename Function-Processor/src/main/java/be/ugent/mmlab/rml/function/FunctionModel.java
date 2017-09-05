@@ -30,7 +30,7 @@ public class FunctionModel {
         this.outputs = outputs;
     }
 
-    public ArrayList<Value> execute(Map<String, String> args) {
+    public ArrayList<Value> execute(Map<String, Object> args) {
         Object[] parameters = this.getParameters(args);
         try {
             return this.toValue(this.method.invoke(null, parameters), this.getDataType(args));
@@ -84,7 +84,7 @@ public class FunctionModel {
         return values;
     }
 
-    private IRI getDataType(Map<String, String> args) {
+    private IRI getDataType(Map<String, Object> args) {
         SimpleValueFactory vf = SimpleValueFactory.getInstance();
         String type = null;
         if (this.outputs.length > 0) {
@@ -99,7 +99,7 @@ public class FunctionModel {
             type = "http://dbpedia.org/datatype/" + args.get("http://dbpedia.org/function/unitParameter");
         }
         if ((type == null) && args.containsKey("http://dbpedia.org/function/dataTypeParameter")) {
-            if (args.get("http://dbpedia.org/function/dataTypeParameter").equals("owl:Thing")) {
+            if (args.get("http://dbpedia.org/function/dataTypeParameter").toString().equals("owl:Thing")) {
                 type = "http://www.w3.org/2001/XMLSchema#anyURI";
             }
         }
@@ -109,7 +109,7 @@ public class FunctionModel {
         return vf.createIRI(type);
     }
 
-    private Object[] getParameters(Map<String, String> parameters) {
+    private Object[] getParameters(Map<String, Object> parameters) {
         Object[] args = new Object[this.parameters.length];
         Class[] paramTypes = this.method.getParameterTypes();
         for (int i = 0; i < this.parameters.length; i++) {
@@ -122,14 +122,14 @@ public class FunctionModel {
         return args;
     }
 
-    private Object parseParameter(String parameter, Class type) {
+    private Object parseParameter(Object parameter, Class type) {
         switch (type.getName()) {
             case "java.lang.String":
-                return parameter;
+                return parameter.toString();
             case "int":
-                return Integer.parseInt(parameter);
+                return Integer.parseInt(parameter.toString());
             case "double":
-                return Double.parseDouble(parameter);
+                return Double.parseDouble(parameter.toString());
             default:
                 throw new Error("Couldn't derive " + type.getName() + " from " + parameter);
         }
