@@ -38,10 +38,9 @@
         <module>RML-Processor</module>
         <module>RML-Condition</module>
         <module>RML-MapDocHandler</module>
-        <module>Function-Processor</module>
+        <module>function-processor-java</module>
         <module>RML-DataRetrieval</module>
         <module>RML-MetadataHandler</module>
-        <module>dbpedia-parsing-functions-scala</module>
     </modules>
 
     <build>

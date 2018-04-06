@@ -26,3 +26,6 @@
 	path = RML-MetadataHandler
 	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-Metadata.git
 	branch = extension-fno-prov
+[submodule "function-processor-java"]
+	path = function-processor-java
+	url = ssh://git@github.com/fnoio/function-processor-java.git
