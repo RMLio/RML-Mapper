@@ -5,6 +5,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Map;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
 import org.eclipse.rdf4j.model.Value;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -58,7 +59,7 @@ public class ConcreteFunctionProcessor {
 
         if (fn == null) {
             log.error("An implementation of function " + function + " was not found in `resources/functions`.");
-            //TODO: wmaroy:
+            //TODO: wmaroy
             return new ArrayList<>();
         }
         log.debug(parameters.toString());

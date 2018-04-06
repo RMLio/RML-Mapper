@@ -3,7 +3,6 @@ package be.ugent.mmlab.rml.function;
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
-
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -33,7 +32,12 @@ public class FunctionModel {
     public ArrayList<Value> execute(Map<String, Object> args) {
         Object[] parameters = this.getParameters(args);
         try {
-            return this.toValue(this.method.invoke(null, parameters), this.getDataType(args));
+            Long start = System.currentTimeMillis();
+            Object object = this.method.invoke(null, parameters);
+            Long end = System.currentTimeMillis() - start;
+            ArrayList<Value> result = this.toValue(object, this.getDataType(args));
+            return result;
+
         } catch (IllegalAccessException | InvocationTargetException e) {
             // Nothing to do?
             e.printStackTrace(); // maybe this? :p
@@ -103,9 +107,13 @@ public class FunctionModel {
                 type = "http://www.w3.org/2001/XMLSchema#anyURI";
             }
         }
+        if ((type == null) && args.containsKey("http://dbpedia.org/function/equals/valueParameter")) {
+            type = "http://www.w3.org/2001/XMLSchema#boolean";
+        }
         if (type == null) {
             type = "http://www.w3.org/2001/XMLSchema#string";
         }
+
         return vf.createIRI(type);
     }
 

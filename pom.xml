@@ -41,6 +41,7 @@
         <module>Function-Processor</module>
         <module>RML-DataRetrieval</module>
         <module>RML-MetadataHandler</module>
+        <module>dbpedia-parsing-functions-scala</module>
     </modules>
 
     <build>
@@ -100,5 +101,6 @@
                 </executions>
             </plugin>
         </plugins>
+
     </build>
 </project>
