@@ -13,6 +13,8 @@ import net.minidev.json.JSONArray;
 import net.minidev.json.JSONObject;
 import net.minidev.json.parser.JSONParser;
 import net.minidev.json.parser.ParseException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.tools.JavaCompiler;
 import javax.tools.ToolProvider;
@@ -23,6 +25,10 @@ import javax.tools.ToolProvider;
  * @author bjdmeest
  */
 public class FunctionHandler {
+
+    // Log
+    private static final Logger log =
+            LoggerFactory.getLogger(FunctionHandler.class);
 
     public String basePath;
 
@@ -53,7 +59,8 @@ public class FunctionHandler {
         try {
             a = (JSONObject) parser.parse(new FileReader(this.basePath + "/metadata.json"));
         } catch (ParseException | FileNotFoundException e) {
-            e.printStackTrace();
+            log.debug("not found! Please make sure you have a folder `resources/functions` in your working dir! Please check the source of RML-Mapper for an example", e);
+            return false;
         }
         JSONArray files = (JSONArray) a.get("files");
         for (int i = 0; i < files.size(); i++) {

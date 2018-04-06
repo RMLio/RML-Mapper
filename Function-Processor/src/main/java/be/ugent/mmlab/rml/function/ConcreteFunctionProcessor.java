@@ -26,18 +26,23 @@ public class ConcreteFunctionProcessor {
     public static ConcreteFunctionProcessor getInstance() {
         if (instance == null) {
             String basePath = "";
+//            try {
+//                String classJar = ConcreteFunctionProcessor.class.getResource("/be/ugent/mmlab/rml/function/ConcreteFunctionProcessor.class").toString();
+//                if (classJar.startsWith("jar:")) {
+//                    basePath = (new File(ConcreteFunctionProcessor.class.getProtectionDomain().getCodeSource().getLocation().getPath())).getParent() + "/";
+//                } else {
+//                    basePath = (new File(ConcreteFunctionProcessor.class.getProtectionDomain().getCodeSource().getLocation().getPath())).getParent() + "/../../";
+//                }
+//            } catch (Exception e) {
+//                log.error(e.getMessage());
+//            }
             try {
-                String classJar = ConcreteFunctionProcessor.class.getResource("/be/ugent/mmlab/rml/function/ConcreteFunctionProcessor.class").toString();
-                if (classJar.startsWith("jar:")) {
-                    basePath = (new File(ConcreteFunctionProcessor.class.getProtectionDomain().getCodeSource().getLocation().getPath())).getParent() + "/";
-                } else {
-                    basePath = (new File(ConcreteFunctionProcessor.class.getProtectionDomain().getCodeSource().getLocation().getPath())).getParent() + "/../../";
-                }
+                basePath = System.getProperty("user.dir");
             } catch (Exception e) {
                 log.error(e.getMessage());
             }
             log.debug("basePath: " + basePath);
-            handler = new FunctionHandler(basePath + "resources/functions");
+            handler = new FunctionHandler(basePath + "/resources/functions");
             instance = new ConcreteFunctionProcessor();
         }
         return instance;
@@ -52,9 +57,9 @@ public class ConcreteFunctionProcessor {
         FunctionModel fn = handler.get(function);
 
         if (fn == null) {
-            log.error("The function " + function + " was not defined.");
+            log.error("An implementation of function " + function + " was not found in `resources/functions`.");
             //TODO: wmaroy:
-            return null;
+            return new ArrayList<>();
         }
         log.debug(parameters.toString());
         ArrayList<Value> result = fn.execute(parameters);
