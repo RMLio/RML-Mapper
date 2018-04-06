@@ -1,7 +1,7 @@
 [submodule "RML-Processor"]
 	path = RML-Processor
 	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-Processor.git
-	branch = development
+	branch = extension-fno-prov
 [submodule "RML-Model"]
 	path = RML-Model
 	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-Model.git
@@ -25,4 +25,4 @@
 [submodule "RML-MetadataHandler"]
 	path = RML-MetadataHandler
 	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-Metadata.git
-	branch = development
+	branch = extension-fno-prov
