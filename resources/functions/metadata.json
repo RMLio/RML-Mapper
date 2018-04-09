@@ -13,12 +13,6 @@
               "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#valueParameter",
               "type": "xsd:string"
             }
-          ],
-          "outputs": [
-            {
-              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#boolOutput",
-              "type": "xsd:boolean"
-            }
           ]
         },
         {
@@ -32,12 +26,6 @@
             {
               "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#subStringParameter",
               "type": "xsd:string"
-            }
-          ],
-          "outputs": [
-            {
-              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#boolOutput",
-              "type": "xsd:boolean"
             }
           ]
         },
@@ -53,12 +41,6 @@
               "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#regexParameter",
               "type": "xsd:string"
             }
-          ],
-          "outputs": [
-            {
-              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#boolOutput",
-              "type": "xsd:boolean"
-            }
           ]
         },
         {
@@ -67,12 +49,6 @@
           "parameters": [
             {
               "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#valueParameter",
-              "type": "xsd:string"
-            }
-          ],
-          "outputs": [
-            {
-              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#stringOutput",
               "type": "xsd:string"
             }
           ]
@@ -89,44 +65,98 @@
               "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#modeParameter",
               "type": "xsd:string"
             }
-          ],
-          "outputs": [
+          ]
+        }
+      ]
+    },
+    {
+      "path": "DBpediaFunctions.jar",
+      "mime": "application/java-archive",
+      "name": "DBpediaFunctions",
+      "functions": [
+        {
+          "url": "http://dbpedia.org/function/latFunction",
+          "name": "latFunction",
+          "parameters": [
             {
-              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#stringOutput",
+              "url" : "http://dbpedia.org/function/latParameter",
               "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/latDegreesParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/latMinutesParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/latSecondsParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/latDirectionParameter",
+              "type" : "xsd:string"
+            }
+          ]
+        },
+        {
+          "url": "http://dbpedia.org/function/lonFunction",
+          "name": "lonFunction",
+          "parameters": [
+            {
+              "url" : "http://dbpedia.org/function/lonParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/lonDegreesParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/lonMinutesParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/lonSecondsParameter",
+              "type": "xsd:string"
+            },
+            {
+              "url" : "http://dbpedia.org/function/lonDirectionParameter",
+              "type" : "xsd:string"
             }
           ]
         }
       ]
     },
     {
-      "path": "SimilarityFunctions.jar",
+      "path": "EcodaloFunctions.jar",
       "mime": "application/java-archive",
-      "name": "SimilarityFunctions",
+      "name": "EcodaloFunctions",
       "functions": [
         {
-          "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#jaccard",
-          "name": "jaccard",
+          "url": "http://users.ugent.be/~bjdmeest/function/ecodalo#decide",
+          "name": "decide",
           "parameters": [
             {
-              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#fromString",
+              "url": "http://users.ugent.be/~bjdmeest/function/ecodalo#input",
               "type": "xsd:string"
             },
             {
-              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#toString",
+              "url": "http://users.ugent.be/~bjdmeest/function/ecodalo#expected",
               "type": "xsd:string"
             },
             {
-              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#thresholdDouble",
-              "type": "xsd:decimal"
+              "url": "http://users.ugent.be/~bjdmeest/function/ecodalo#result",
+              "type": "xsd:string"
             }
           ],
           "outputs": [
             {
-              "url": "http://users.ugent.be/~bjdmeest/function/similarity.ttl#toString",
-              "type": "xsd:boolean"
+              "url": "http://users.ugent.be/~bjdmeest/function/anime.ttl#output",
+              "type": "xsd:anyURI"
             }
           ]
+
         }
       ]
     }
