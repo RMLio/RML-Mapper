@@ -28,4 +28,4 @@
 	branch = extension-fno-prov
 [submodule "function-processor-java"]
 	path = function-processor-java
-	url = ssh://git@github.com/fnoio/function-processor-java.git
+	url = http://git@github.com/fnoio/function-processor-java.git
