@@ -13,6 +13,13 @@ Build RML-Mapper
 Run 
 
 	bin/RML-Mapper
+  
+Testing RML-Mapper
+------------------
+
+Copy ./resources into RML-Processor
+
+`mvn test`
 
 
 Run RML-Mapper
