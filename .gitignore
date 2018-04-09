@@ -10,3 +10,4 @@ log/
 *.yml
 *.jar
 *.bu
+!resources/functions/*.jar
