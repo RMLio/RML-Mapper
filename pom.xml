@@ -5,7 +5,7 @@
 
     <groupId>be.ugent.mmlab.rml</groupId>
     <artifactId>RML-Mapper</artifactId>
-    <version>1.1</version>
+    <version>3.0.0</version>
     <dependencies>
         <dependency>
             <groupId>org.slf4j</groupId>
