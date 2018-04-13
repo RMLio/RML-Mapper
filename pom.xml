@@ -5,7 +5,7 @@
 
     <groupId>be.ugent.mmlab.rml</groupId>
     <artifactId>RML-Mapper</artifactId>
-    <version>1.1</version>
+    <version>3.0.0</version>
     <dependencies>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -28,6 +28,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <sesame.version>2.7.14</sesame.version>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
 
     <modules>
@@ -36,7 +38,7 @@
         <module>RML-Processor</module>
         <module>RML-Condition</module>
         <module>RML-MapDocHandler</module>
-        <module>Function-Processor</module>
+        <module>function-processor-java</module>
         <module>RML-DataRetrieval</module>
         <module>RML-MetadataHandler</module>
     </modules>
@@ -98,5 +100,6 @@
                 </executions>
             </plugin>
         </plugins>
+
     </build>
 </project>

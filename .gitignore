@@ -1,9 +1,8 @@
 .idea/
+.project
 /target/
-/RML-Metadata/target/
-/Function-Processor/target/
-/RML-LogicalSourceHandler/target/
-/RML-Mapper-copy/nbproject/private/
+.settings/
+target/
 log/
 /data/
 *.log
@@ -11,3 +10,5 @@ log/
 *.yml
 *.jar
 *.bu
+!resources/functions/*.jar
+dependency-reduced-pom.xml

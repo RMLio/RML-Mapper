@@ -13,6 +13,12 @@
               "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#valueParameter",
               "type": "xsd:string"
             }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#boolOutput",
+              "type": "xsd:boolean"
+            }
           ]
         },
         {
@@ -26,6 +32,12 @@
             {
               "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#subStringParameter",
               "type": "xsd:string"
+            }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#boolOutput",
+              "type": "xsd:boolean"
             }
           ]
         },
@@ -41,6 +53,12 @@
               "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#regexParameter",
               "type": "xsd:string"
             }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#boolOutput",
+              "type": "xsd:boolean"
+            }
           ]
         },
         {
@@ -49,6 +67,12 @@
           "parameters": [
             {
               "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#valueParameter",
+              "type": "xsd:string"
+            }
+          ],
+          "outputs": [
+            {
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#stringOutput",
               "type": "xsd:string"
             }
           ]
@@ -65,64 +89,11 @@
               "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#modeParameter",
               "type": "xsd:string"
             }
-          ]
-        }
-      ]
-    },
-    {
-      "path": "DBpediaFunctions.jar",
-      "mime": "application/java-archive",
-      "name": "DBpediaFunctions",
-      "functions": [
-        {
-          "url": "http://dbpedia.org/function/latFunction",
-          "name": "latFunction",
-          "parameters": [
+          ],
+          "outputs": [
             {
-              "url" : "http://dbpedia.org/function/latParameter",
+              "url": "http://users.ugent.be/~bjdmeest/function/grel.ttl#stringOutput",
               "type": "xsd:string"
-            },
-            {
-              "url" : "http://dbpedia.org/function/latDegreesParameter",
-              "type": "xsd:string"
-            },
-            {
-              "url" : "http://dbpedia.org/function/latMinutesParameter",
-              "type": "xsd:string"
-            },
-            {
-              "url" : "http://dbpedia.org/function/latSecondsParameter",
-              "type": "xsd:string"
-            },
-            {
-              "url" : "http://dbpedia.org/function/latDirectionParameter",
-              "type" : "xsd:string"
-            }
-          ]
-        },
-        {
-          "url": "http://dbpedia.org/function/lonFunction",
-          "name": "lonFunction",
-          "parameters": [
-            {
-              "url" : "http://dbpedia.org/function/lonParameter",
-              "type": "xsd:string"
-            },
-            {
-              "url" : "http://dbpedia.org/function/lonDegreesParameter",
-              "type": "xsd:string"
-            },
-            {
-              "url" : "http://dbpedia.org/function/lonMinutesParameter",
-              "type": "xsd:string"
-            },
-            {
-              "url" : "http://dbpedia.org/function/lonSecondsParameter",
-              "type": "xsd:string"
-            },
-            {
-              "url" : "http://dbpedia.org/function/lonDirectionParameter",
-              "type" : "xsd:string"
             }
           ]
         }
@@ -156,7 +127,6 @@
               "type": "xsd:anyURI"
             }
           ]
-
         }
       ]
     }
