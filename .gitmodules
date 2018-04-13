@@ -1,31 +1,31 @@
 [submodule "RML-Processor"]
 	path = RML-Processor
-	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-Processor.git
-	branch = extension-fno-prov
+	url = http://git@github.com/RMLio/RML-Processor.git
+	branch = master
 [submodule "RML-Model"]
 	path = RML-Model
-	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-Model.git
-	branch = development
+	url = http://git@github.com/RMLio/RML-Model.git
+	branch = master
 [submodule "RML-ConditionsHandler"]
 	path = RML-Condition
-	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-Condition.git
-	branch = development
+	url = http://git@github.com/RMLio/RML-Condition.git
+	branch = master
 [submodule "RML-DataRetrieval"]
 	path = RML-DataRetrieval
-	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-DataRetrieval.git
-	branch = development
+	url = http://git@github.com/RMLio/RML-DataRetrieval.git
+	branch = master
 [submodule "RML-MapDocHandler"]
 	path = RML-MapDocHandler
-	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-MapDocHandler.git
-	branch = development
+	url = http://git@github.com/RMLio/RML-MapDocHandler.git
+	branch = master
 [submodule "RML-LogicalSourceHandler"]
 	path = RML-LogicalSourceHandler
-	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-LogicalSourceHandler.git
-	branch = development
+	url = http://git@github.com/RMLio/RML-LogicalSourceHandler.git
+	branch = master
 [submodule "RML-MetadataHandler"]
 	path = RML-MetadataHandler
-	url = ssh://git@git.datasciencelab.ugent.be:4444/rml/RML-Metadata.git
-	branch = extension-fno-prov
+	url = http://git@github.com/RMLio/RML-MetadataHandler.git
+	branch = master
 [submodule "function-processor-java"]
 	path = function-processor-java
 	url = http://git@github.com/fnoio/function-processor-java.git
