@@ -1,6 +1,14 @@
-
-*.jar
-
+.idea/
 .project
+/target/
 .settings/
 target/
+log/
+/data/
+*.log
+*.iml
+*.yml
+*.jar
+*.bu
+!resources/functions/*.jar
+dependency-reduced-pom.xml

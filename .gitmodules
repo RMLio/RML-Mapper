@@ -1,21 +1,31 @@
 [submodule "RML-Processor"]
 	path = RML-Processor
-	url = https://github.com/RMLio/RML-Processor.git
+	url = http://git@github.com/RMLio/RML-Processor.git
+	branch = master
 [submodule "RML-Model"]
 	path = RML-Model
-	url = https://github.com/RMLio/RML-Model.git
-[submodule "RML-Condition"]
+	url = http://git@github.com/RMLio/RML-Model.git
+	branch = master
+[submodule "RML-ConditionsHandler"]
 	path = RML-Condition
-	url = https://github.com/RMLio/RML-Condition.git
+	url = http://git@github.com/RMLio/RML-Condition.git
+	branch = master
 [submodule "RML-DataRetrieval"]
 	path = RML-DataRetrieval
-	url = https://github.com/RMLio/RML-DataRetrieval.git
+	url = http://git@github.com/RMLio/RML-DataRetrieval.git
+	branch = master
 [submodule "RML-MapDocHandler"]
 	path = RML-MapDocHandler
-	url = https://github.com/RMLio/RML-MapDocHandler.git
-[submodule "RML-MetadataHandler"]
-	path = RML-MetadataHandler
-	url = https://github.com/RMLio/RML-MetadataHandler.git
+	url = http://git@github.com/RMLio/RML-MapDocHandler.git
+	branch = master
 [submodule "RML-LogicalSourceHandler"]
 	path = RML-LogicalSourceHandler
-	url = https://github.com/RMLio/RML-LogicalSourceHandler.git
+	url = http://git@github.com/RMLio/RML-LogicalSourceHandler.git
+	branch = master
+[submodule "RML-MetadataHandler"]
+	path = RML-MetadataHandler
+	url = http://git@github.com/RMLio/RML-MetadataHandler.git
+	branch = master
+[submodule "function-processor-java"]
+	path = function-processor-java
+	url = http://git@github.com/fnoio/function-processor-java.git
