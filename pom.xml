@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>be.ugent.mmlab.rml</groupId>
     <artifactId>RML-Mapper</artifactId>
-    <version>1.0</version>
+    <version>3.0.0</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.7</version>
+        </dependency>
+    </dependencies>
+    <!-- <dependencies>
+        <dependency>
+            <groupId>be.ugent.mmlab.rml</groupId>
+            <artifactId>RML-ConditionsHandler</artifactId>
+            <version>1.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies> -->
     <packaging>pom</packaging>
 
     <name>RML - Mapper</name>
@@ -13,16 +28,20 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <sesame.version>2.7.14</sesame.version>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
 
     <modules>
-	<module>RML-Processor</module>
         <module>RML-Model</module>
+        <module>RML-LogicalSourceHandler</module>
+        <module>RML-Processor</module>
         <module>RML-Condition</module>
-	<module>RML-MapDocHandler</module>
-	<module>RML-DataRetrieval</module>
-    <module>RML-Metadata</module>
-  </modules>
+        <module>RML-MapDocHandler</module>
+        <module>function-processor-java</module>
+        <module>RML-DataRetrieval</module>
+        <module>RML-MetadataHandler</module>
+    </modules>
 
     <build>
         <plugins>
@@ -45,8 +64,8 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>2.5</version>                
-            </plugin> 
+                <version>2.5</version>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -59,10 +78,12 @@
                         </goals>
                         <configuration>
                             <transformers>
-                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass>be.ugent.mmlab.rml.main.Main</mainClass>
                                 </transformer>
-                                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                             </transformers>
                             <filters>
                                 <filter>
@@ -79,5 +100,6 @@
                 </executions>
             </plugin>
         </plugins>
+
     </build>
 </project>
