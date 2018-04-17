@@ -13,7 +13,7 @@ execute () {
   
   #check if RMLMapper.jar exists
   if [ ! -d "RML-Mapper.jar" ]; then
-    cp RML-Processor/target/RML-Processor-3.0.0.jar RML-Mapper-v3.0.1.jar
+    cp RML-Processor/target/RML-Processor-3.0.1.jar RML-Mapper-v3.0.1.jar
   fi
   
   #excute the mapping document
